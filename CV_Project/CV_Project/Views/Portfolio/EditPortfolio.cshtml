@@ -1,0 +1,50 @@
+﻿@model EntityLayer.Concrete.Portfolio
+
+@{
+    ViewData["Title"] = "EditPortfolio";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("EditPortfolio", "Portfolio", FormMethod.Post))
+{
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <form class="forms-sample">
+                    <div class="form-group">
+                        <label>ID</label>
+                        @Html.TextBoxFor(x => x.PortfolioID, new { @class = "form-control", @readonly = "readonly" })
+                    </div>
+                    <div class="form-group">
+                        <label>Başlık</label>
+                        @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>Görsel 1</label>
+                        @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>Görsel 2</label>
+                        @Html.TextBoxFor(x => x.ImageUrl2, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>Proje Url</label>
+                        @Html.TextBoxFor(x => x.ProjectUrl, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>Platform</label>
+                        @Html.TextBoxFor(x => x.Platform, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="customSwitch1" asp-for="Status">
+                            <label class="custom-control-label" for="customSwitch1">Durum</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2">Kaydet</button>
+                    <button type="button" class="btn btn-danger" onclick="location.href='@Url.Action("Index", "Portfolio")'">İptal</button>
+                </form>
+            </div>
+        </div>
+    </div>
+}

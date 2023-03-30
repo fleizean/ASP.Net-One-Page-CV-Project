@@ -1,0 +1,48 @@
+﻿@using EntityLayer.Concrete
+@model List<SenderReceiverMessage>
+@{
+	ViewData["Title"] = "ReceiverMessageDetails";
+	Layout = "~/Views/Shared/_WriterLayout.cshtml";
+}
+
+<div class="card col-12 mx-auto">
+	@for (int i = 0; i < Model.Count; i++)
+	{
+		@if (i == 0)
+		{
+			<div class="py-2 px-4 border-bottom d-none d-lg-block">
+				<div class="d-flex align-items-center py-1">
+					<div class="flex-grow-1 pl-3">
+						<strong>@Model[i].SenderName</strong> [@Model[i].Sender]'dan <strong>@Model[i].ReceiverName</strong> [@Model[i].Receiver] kişisine
+					</div>
+				</div>
+			</div>
+		}
+		<div class="chat-message-left pb-4">
+			<div class="text-muted small text-nowrap mt-2">@Model[i].Date.ToString("hh:mm tt")</div>
+			<div class="flex-shrink-1 bg-light rounded py-2 px-3 ml-3">
+				<div class="font-weight-bold mb-1">@Model[i].SenderName</div>
+				@Html.Raw(@Model[i].MessageContent.Replace(Environment.NewLine, "<br />"))
+			</div>
+		</div>
+		@if (i == Model.Count - 1)
+			{
+			<div class="flex-grow-0 py-3 px-4 border-top">
+				<form method="post">
+					<div class="form-group">
+						<div class="input-group">
+							<input type="hidden" name="Sender" value="@Model[0].Receiver" />
+							<input type="hidden" name="Receiver" value="@Model[0].Sender" />
+							<input type="text" class="form-control mr-2" name="Subject" placeholder="Konuyu yaz...">
+						</div>
+						<div class="input-group mt-2">
+							<input type="text" class="form-control" name="MessageContent" placeholder="Mesajını yaz...">
+						</div>
+						<br />
+						<button class="btn btn-primary ml-2">Gönder</button>
+					</div>
+				</form>
+			</div>
+		}
+	}
+</div>

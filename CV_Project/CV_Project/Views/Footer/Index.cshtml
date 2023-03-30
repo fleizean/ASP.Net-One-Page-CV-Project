@@ -1,0 +1,32 @@
+﻿@model EntityLayer.Concrete.Footer
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+	<div class="card">
+		<div class="card-body">
+			<form class="forms-sample" method="post">
+				<div class="form-group">
+					<label>ID</label>
+					@Html.TextBoxFor(x => x.FooterID, new { @class = "form-control", @readonly = "readonly" })
+				</div>
+				<div class="form-group">
+					<label>Başlık</label>
+					@Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+				</div>
+				<div class="form-group">
+					<label>Açıklama</label>
+					@Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+				</div>
+				<div class="form-group">
+					<label>Alt Açıklama</label>
+					@Html.TextBoxFor(x => x.SubDescription, new { @class = "form-control" })
+				</div>
+				<button type="submit" class="btn btn-success mr-2">Güncelle</button>
+				<button type="button" class="btn btn-danger" onclick="location.href='@Url.Action("Index", "Dashboard")'">İptal</button>
+			</form>
+		</div>
+	</div>
+</div>

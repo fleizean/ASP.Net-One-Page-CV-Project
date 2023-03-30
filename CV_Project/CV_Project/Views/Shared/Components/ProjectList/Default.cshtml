@@ -1,0 +1,46 @@
+﻿@using EntityLayer.Concrete
+@model List<Portfolio>
+
+<div class="row ">
+	<div class="col-12 grid-margin">
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title">Proje Listesi</h4>
+				<div class="table-responsive">
+					<table class="table">
+						<thead>
+							<tr>
+								<th scope="col" class="sort" data-sort="name">#</th>
+								<th> Proje Adı </th>
+								<th> Proje Url </th>
+								<th> Platform </th>
+								<th> Durum </th>
+							</tr>
+						</thead>
+						<tbody>
+							@foreach (var item in Model)
+								{
+							<tr>
+								<td style="color:white; font-weight:bold">@item.PortfolioID</td>
+								<td style="color:white">@item.Name</td>
+								<td><a href="@item.ProjectUrl" target="_blank" title="@item.ProjectUrl" style="color:blueviolet">Link</a></td>
+								<td style="color:white">@item.Platform</td>
+								<td>
+									@if (item.Status == true)
+									{
+									<div class="badge badge-outline-success">Tamamlandı</div>
+									}
+									else
+									{
+									<div class="badge badge-outline-pending">Devam ediyor</div>
+									}
+									</td>
+							</tr>
+								}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,12 @@
+/Users/fleizean/Desktop/Self-Project/Asp.Net/CV_Project/EntityLayer/bin/Release/net5.0/EntityLayer.deps.json
+/Users/fleizean/Desktop/Self-Project/Asp.Net/CV_Project/EntityLayer/bin/Release/net5.0/EntityLayer.dll
+/Users/fleizean/Desktop/Self-Project/Asp.Net/CV_Project/EntityLayer/bin/Release/net5.0/ref/EntityLayer.dll
+/Users/fleizean/Desktop/Self-Project/Asp.Net/CV_Project/EntityLayer/bin/Release/net5.0/EntityLayer.pdb
+/Users/fleizean/Desktop/Self-Project/Asp.Net/CV_Project/EntityLayer/obj/Release/net5.0/EntityLayer.csproj.AssemblyReference.cache
+/Users/fleizean/Desktop/Self-Project/Asp.Net/CV_Project/EntityLayer/obj/Release/net5.0/EntityLayer.GeneratedMSBuildEditorConfig.editorconfig
+/Users/fleizean/Desktop/Self-Project/Asp.Net/CV_Project/EntityLayer/obj/Release/net5.0/EntityLayer.AssemblyInfoInputs.cache
+/Users/fleizean/Desktop/Self-Project/Asp.Net/CV_Project/EntityLayer/obj/Release/net5.0/EntityLayer.AssemblyInfo.cs
+/Users/fleizean/Desktop/Self-Project/Asp.Net/CV_Project/EntityLayer/obj/Release/net5.0/EntityLayer.csproj.CoreCompileInputs.cache
+/Users/fleizean/Desktop/Self-Project/Asp.Net/CV_Project/EntityLayer/obj/Release/net5.0/EntityLayer.dll
+/Users/fleizean/Desktop/Self-Project/Asp.Net/CV_Project/EntityLayer/obj/Release/net5.0/ref/EntityLayer.dll
+/Users/fleizean/Desktop/Self-Project/Asp.Net/CV_Project/EntityLayer/obj/Release/net5.0/EntityLayer.pdb

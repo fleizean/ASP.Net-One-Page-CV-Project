@@ -1,0 +1,53 @@
+﻿@using EntityLayer.Concrete
+@model List<Portfolio>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="sort" data-sort="name">#</th>
+                            <th>Başlık</th>
+                            <th>Proje Url</th>
+                            <th>Platform</th>
+                            <th>Status</th>
+                            <th>Sil</th>
+                            <th>Güncelle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td style="color:white; font-weight:bold">@item.PortfolioID</td>
+                                <td style="color:white">@item.Name</td>
+                                <td style="color:blueviolet"><a href="@item.ProjectUrl" target="_blank">Tıkla</a></td>
+                                <td style="color:white">@item.Platform</td>
+                                @if (item.Status == true)
+                                {
+                                    <td><span class="label label-success" style="color:green; font-weight:bold">Tamamlandı</span></td>
+                                }
+                                else
+                                {
+                                    <td><span class="label label-warning" style="color: red; font-weight: bold">Devam Ediyor</span></td>
+                                }
+                                <td><a href="/Portfolio/DeletePortfolio/@item.PortfolioID" class="btn btn-outline-danger" onclick="return confirm('Gerçekten silmek istiyor musunuz?')">Sil</a></td>
+                                <td><a href="/Portfolio/EditPortfolio/@item.PortfolioID" class="btn btn-outline-success">Güncelle</a></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <div style="text-align: left;">
+                    <br />
+                    <a href="/Portfolio/AddPortfolio/" class="btn btn-outline-info">Yeni Çalışma Ekle</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

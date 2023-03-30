@@ -1,0 +1,36 @@
+﻿<Properties StartupConfiguration="{3379B546-0806-4548-8AB8-F60AC871A9BC}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CV_Project/Areas/Writer/Views/Default/_SideBarPartial.cshtml">
+    <Files>
+      <File FileName="CV_Project/Areas/Writer/Views/Default/_SideBarPartial.cshtml" Line="39" Column="14" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CV_Project" expanded="True">
+            <Node name="CV_Project" expanded="True" selected="True">
+              <Node name="Areas" expanded="True">
+                <Node name="Writer" expanded="True">
+                  <Node name="Views" expanded="True">
+                    <Node name="Default" expanded="True" />
+                    <Node name="Register" expanded="True" />
+                    <Node name="Shared" expanded="True">
+                      <Node name="Components" expanded="True" />
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.CV__Project PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.ItemProperties.CV__Project__Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

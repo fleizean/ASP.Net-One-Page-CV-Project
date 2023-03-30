@@ -1,0 +1,118 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>fleizean Admin Panel</title>
+    <link rel="stylesheet" href="~/coronadashboard/template/assets/css/style.css">
+    <link rel="stylesheet" href="~/coronadashboard/template/assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="~/coronadashboard/template/assets/vendors/css/vendor.bundle.base.css">
+    <link rel="shortcut icon" href="~/coronadashboard/template/assets/images/favicon.png" />
+</head>
+<body>
+    <div class="container-scroller">
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+            <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
+                <a class="sidebar-brand brand-logo" href="/Dashboard/"><img src="~/coronadashboard/template/assets/images/logo.png" alt="logo" /></a>
+                <a class="sidebar-brand brand-logo-mini" href="/Dashboard/"><img src="~/coronadashboard/template/assets/images/logo-mini.png" alt="logo" /></a>
+            </div>
+            @await Component.InvokeAsync("NewSidebarList")
+        </nav>
+        <div class="container-fluid page-body-wrapper">
+            <nav class="navbar p-0 fixed-top d-flex flex-row">
+                <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
+                    <a class="navbar-brand brand-logo-mini" href="~/coronadashboard/template/index.html"><img src="~/coronadashboard/template/assets/images/logo-mini.png" alt="logo" /></a>
+                </div>
+                <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
+                    <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+                        <span class="mdi mdi-menu"></span>
+                    </button>
+                    <ul class="navbar-nav w-100">
+                        <li class="nav-item w-100">
+                            <form class="nav-link mt-2 mt-md-0 d-none d-lg-flex search">
+                                <input type="text" class="form-control" placeholder="Ara...">
+                            </form>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav navbar-nav-right">
+                        <li class="nav-item dropdown d-none d-lg-block">
+                            <a class="nav-link btn btn-success create-new-button" id="createbuttonDropdown" data-toggle="dropdown" aria-expanded="false" href="#">+ Yeni Proje Ekleme</a>
+                            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="createbuttonDropdown">
+                                <h6 class="p-3 mb-0">Proje Türü</h6>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item preview-item" href="/Portfolio/AddPortfolio/">
+                                    <div class="preview-thumbnail">
+                                        <div class="preview-icon bg-dark rounded-circle">
+                                            <i class="mdi mdi-github-box text-primary"></i>
+                                        </div>
+                                    </div>
+                                    <div class="preview-item-content">
+                                        <p class="preview-subject ellipsis mb-1">Projeler</p>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item preview-item" href="/Skill/AddSkill/">
+                                    <div class="preview-thumbnail">
+                                        <div class="preview-icon bg-dark rounded-circle">
+                                            <i class="mdi mdi-checkbox-marked-outline text-info"></i>
+                                        </div>
+                                    </div>
+                                    <div class="preview-item-content">
+                                        <p class="preview-subject ellipsis mb-1">Yetenekler</p>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item preview-item" href="/Service/AddService/">
+                                    <div class="preview-thumbnail">
+                                        <div class="preview-icon bg-dark rounded-circle">
+                                            <i class="mdi mdi-cloud-outline text-danger"></i>
+                                        </div>
+                                    </div>
+                                    <div class="preview-item-content">
+                                        <p class="preview-subject ellipsis mb-1">Hizmetler</p>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                            </div>
+                        </li>
+
+                        @await Component.InvokeAsync("AdminNavbarMessageList")
+
+                        @await Component.InvokeAsync("AdminNotificationNavbarList")
+
+                        @await Component.InvokeAsync("AdminProfileList")
+
+                    </ul>
+                    <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+                        <span class="mdi mdi-format-line-spacing"></span>
+                    </button>
+                </div>
+            </nav>
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    @RenderBody()
+                </div>
+                @await RenderSectionAsync("Scripts", required:false)
+            </div>
+        </div>
+    </div>
+    <script src="~/coronadashboard/template/assets/js/off-canvas.js"></script>
+    <script src="~/coronadashboard/template/assets/js/hoverable-collapse.js"></script>
+    <script src="~/coronadashboard/template/assets/js/misc.js"></script>
+    <script src="~/coronadashboard/template/assets/js/settings.js"></script>
+    <script src="~/coronadashboard/template/assets/js/todolist.js"></script>
+    <script src="~/coronadashboard/template/assets/vendors/js/vendor.bundle.base.js"></script>
+
+    <script src="~/coronadashboard/template/assets/vendors/chart.js/Chart.min.js"></script>
+    <script src="~/coronadashboard/template/assets/vendors/progressbar.js/progressbar.min.js"></script>
+    <script src="~/coronadashboard/template/assets/vendors/jvectormap/jquery-jvectormap.min.js"></script>
+    <script src="~/coronadashboard/template/assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="~/coronadashboard/template/assets/vendors/owl-carousel-2/owl.carousel.min.js"></script>
+
+    <script src="~/coronadashboard/template/assets/js/dashboard.js"></script>
+</body>
+</html>

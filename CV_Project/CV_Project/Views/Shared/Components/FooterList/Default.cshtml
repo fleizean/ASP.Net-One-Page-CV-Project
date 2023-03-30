@@ -1,0 +1,18 @@
+﻿@using EntityLayer.Concrete
+@model List<Footer>
+
+	<footer class="pt-4 pb-4 text-center bg-light">
+		@foreach (var item in Model)
+			{
+		<div class="container">
+            <div class="my-3">
+                <div class="h4">@item.Title</div>
+                <p>@item.Description</p>
+                @await Component.InvokeAsync("SocialMediaFooterList")
+            </div>
+			<div class="text-small text-secondary">
+				<div class="mb-1">@item.SubDescription</div>
+			</div>
+		</div>
+			}
+	</footer>

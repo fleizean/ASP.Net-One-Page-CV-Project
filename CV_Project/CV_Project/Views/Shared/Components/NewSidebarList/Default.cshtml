@@ -1,0 +1,98 @@
+﻿<ul class="nav">
+    <li class="nav-item profile">
+        <div class="profile-desc">
+            <div class="profile-pic">
+                <div class="count-indicator">
+                    <img class="img-xs rounded-circle " src="~/userimage/@ViewBag.v1" alt="">
+                    <span class="count bg-success"></span>
+                </div>
+                <div class="profile-name">
+                    <h5 class="mb-0 font-weight-normal">@ViewBag.v2 @ViewBag.v3</h5>
+                    <span>@ViewBag.v4</span>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="nav-item menu-items">
+        <a class="nav-link" href="/Dashboard/">
+            <span class="menu-icon">
+                <i class="mdi mdi-home"></i>
+            </span>
+            <span class="menu-title">Dashboard</span>
+        </a>
+    </li>
+    <li class="nav-item menu-items">
+        <a class="nav-link" data-toggle="collapse" href="#auth1" aria-expanded="false" aria-controls="auth1">
+            <span class="menu-icon">
+                <i class="mdi mdi-table-edit"></i>
+            </span>
+            <span class="menu-title">Tablolar</span>
+            <i class="menu-arrow"></i>
+        </a>
+        <div class="collapse" id="auth1">
+            <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="/Feature/"> Öne Çıkanlar </a></li>
+                <li class="nav-item"> <a class="nav-link" href="/About/"> Hakkımda </a></li>
+                <li class="nav-item"> <a class="nav-link" href="/Service/"> Hizmetler </a></li>
+                <li class="nav-item"> <a class="nav-link" href="/Skill/"> Yetenekler </a></li>
+                <li class="nav-item"> <a class="nav-link" href="/Portfolio/"> Projeler </a></li>
+                <li class="nav-item"> <a class="nav-link" href="/Experience/"> Deneyimler </a></li>
+                <li class="nav-item"> <a class="nav-link" href="/Experience2/"> Deneyimler Ajax </a></li>
+                <li class="nav-item"> <a class="nav-link" href="/Testimonial/"> Müşteri Yorumları </a></li>
+                <li class="nav-item"> <a class="nav-link" href="/Contact/"> Mesajlar </a></li>
+                <li class="nav-item"> <a class="nav-link" href="/ContactSubContent/"> Mesajlar Alt İçerik </a></li>
+                <li class="nav-item"> <a class="nav-link" href="/SocialMedia/"> Sosyal Medyalar </a></li>
+                <li class="nav-item"> <a class="nav-link" href="/Footer/"> Footer </a></li>
+            </ul>
+        </div>
+    </li>
+    @*<li class="nav-item menu-items">
+            <a class="nav-link" href="~/coronadashboard/template/pages/charts/chartjs.html">
+                <span class="menu-icon">
+                    <i class="mdi mdi-chart-bar"></i>
+                </span>
+                <span class="menu-title">Grafikler</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="~/coronadashboard/template/pages/icons/mdi.html">
+                <span class="menu-icon">
+                    <i class="mdi mdi-contacts"></i>
+                </span>
+                <span class="menu-title">İkonlar</span>
+            </a>
+        </li>*@
+
+    <li class="nav-item menu-items">
+        <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+            <span class="menu-icon">
+                <i class="mdi mdi-message-draw"></i>
+            </span>
+            <span class="menu-title">Admin Mesajlar</span>
+            <i class="menu-arrow"></i>
+        </a>
+        <div class="collapse" id="auth">
+            <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="/AdminMessage/ReceiverMessageList/"> Gelen Kutusu </a></li>
+                <li class="nav-item"> <a class="nav-link" href="/AdminMessage/SenderMessageList/"> Giden Kutusu </a></li>
+                <li class="nav-item"> <a class="nav-link" href="/AdminMessage/SendAdminMessage/"> Mesaj Gönder </a></li>
+            </ul>
+        </div>
+    </li>
+    <li class="nav-item menu-items">
+        <a class="nav-link" href="/Writer/Profile/">
+            <span class="menu-icon">
+                <i class="mdi mdi-settings"></i>
+            </span>
+            <span class="menu-title">Ayarlar</span>
+        </a>
+    </li>
+    <li class="nav-item menu-items">
+        <a class="nav-link" href="/Default/">
+            <span class="menu-icon">
+                <i class="mdi mdi-archive"></i>
+            </span>
+            <span class="menu-title">Siteye Git</span>
+        </a>
+    </li>
+</ul>
